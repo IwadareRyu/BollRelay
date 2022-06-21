@@ -63,7 +63,8 @@ public class BallController : MonoBehaviour
         Instantiate(Effect, this.transform.position, this.transform.rotation);
         if(collision.gameObject.tag == "Atari")
         {
-            Instantiate(m_effect, this.transform.position, this.transform.rotation);
+           // Instantiate(m_effect, this.transform.position, this.transform.rotation);
+            Instantiate(m_effect, collision.contacts[0].point, Quaternion.identity);
         }
     }
 }
